@@ -5,7 +5,7 @@ import { FullBlog } from "../components/FullBlog";
 export function Blog(){
     const {id} = useParams()
     const {loading, blog} = useBlog({
-        id:id || ""
+        id: id || ""
     });
     if(loading){
         return <div className="h-screen flex justify-center flex-col">
@@ -21,7 +21,8 @@ export function Blog(){
             
         </div>
     }
+    
     return <div>
-       <FullBlog blog={blog}/>
+        {blog ? <FullBlog blog={blog} /> : null}
     </div>
 }
