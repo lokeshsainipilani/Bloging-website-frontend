@@ -48,3 +48,9 @@ export function Avatar({name, size="small"}:{name:String, size:"small" | "big"})
 </div>
 
 }
+
+function Avatars(){
+    return <div>
+        Avatars
+    </div>
+}
